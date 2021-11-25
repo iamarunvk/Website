@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="Index.css">
+<style media="screen">
+body {
+  margin: auto;
+  margin-top: 100px;
+  font-family:Helvetica;
+}
+
+#content {
+  float: center ;
+  width: 100% ;
+  margin-top: 100px;
+  padding-top: 70px;
+}
+
+
+
+.content1 {
+  float: center;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+
+}
+
+.content2 {
+  float: left;
+  width: 40%;
+}
+.content3 {
+  float: left;
+  width: 40%;
+}
+
+.content_par {
+  float: right;
+  width: 90%;
+}
+
+
+/* for navigation bar navigation bar at the top of page */
+
+/* End navigation bar at the top of page */
+
+
+/* Welcome window style */
+
+
+
+.col {
+    position: relative;
+    min-height: 10px;
+    padding-right: 25px;
+    padding-left: 25px
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.row1 {
+    float: center;
+}
+
+.row-centered {
+    text-align: center;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -4px;
+}
+
+#welcomeContainer .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+
+}
+
+.col-sm-4 {
+    position: relative;
+    min-height: 10px;
+    padding-right: 25px;
+    padding-left: 25px
+}
+.col-sm-12 {
+    position: relative;
+    min-height: 10px;
+    padding-right: 25px;
+    padding-left: 25px
+}
+
+.col-lg-12 {
+    position: relative;
+    min-height: 10px;
+    padding-right: 25px;
+    padding-left: 25px
+}
+
+
+.popupWindow {
+    background-color: 0.5 !important;
+
+}
+
+
+.popupWindow div.col-centered{
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 1000;
+    width: 50%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 700px;
+    min-height: 50%;
+    min-width: 50%;
+    padding: 2em;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(../fonts/glyphicons-halflings-regular.eot);
+    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.glyphicon-remove:before {
+    content: "\e014"
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.text-justify {
+    text-align: justify
+}
+
+.text-wrap {
+    white-space: wrap
+}
+
+.text-lowercase {
+    text-transform: lowercase
+}
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+.text-capitalize {
+    text-transform: capitalize
+}
+
+
+.h0 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit
+}
+
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777
+}
+
+.h0 .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+    font-size: 65%
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+    font-size: 75%
+}
+
+.h0, h0 {
+    font-size: 50px
+}
+
+
+.h1, h1 {
+    font-size: 50px
+}
+
+.h2, h2 {
+    font-size: 30px
+}
+
+.h3, h3 {
+    font-size: 24px
+}
+
+.h4, h4 {
+    font-size: 18px
+}
+
+.h5, h5 {
+    font-size: 14px
+}
+
+.h6, h6 {
+    font-size: 12px
+}
+
+.small, small {
+    font-size: 85%
+}
+
+.sampleImage {
+    width: 100%;
+    cursor: pointer;
+}
+
+.sampleImage:hover img {
+    border-color: black;
+    border-width: .2em solid;
+}
+
+
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.img-rounded {
+    border-radius: 6px
+}
+
+
+.vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one           */
+    display: flex;
+    align-items: center;
+}
+
+.fullscreen {
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100% !important;
+    position: fixed !important;
+    z-index: 1001 !important;
+    overflow: auto;
+
+}
+/*********/
+
+#video-container {
+    max-width: 50em;
+    margin: auto;
+    border: 0.2em solid #333;
+    box-shadow: 0.5em 0.5em 0.5em rgba( 0, 0, 0, 0.3 );
+    margin-bottom: 20px;
+ }
+
+#video-container video {
+    display: block;
+    width: 100%;
+ }
+
+
+
+ @media screen and (max-width: 650px) {
+   .column {
+     width: 100%;
+     display: block;
+   }
+ }
+
+ .card {
+   float: center;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .container {
+   margin-top: 20px;
+   float: center;
+   padding: 16px 16px;
+ }
+
+ .container::after, .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+ .title {
+   color: grey;
+ }
+
+ .button1 {
+   border: none;
+   outline: 0;
+   display: inline-block;
+   padding: 8px;
+   color: white;
+   background-color: gray;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+ }
+
+ .button1:hover {
+   background-color: #555;
+ }
+
+ .row:after {
+   content: "";
+   display: table;
+   clear: both
+ }
+
+ .column-66 {
+   float: left;
+   width: 60%;
+   padding: 20px;
+ }
+
+ .column-33 {
+   float: left;
+   width: 30%;
+   padding: 20px;
+   padding-bottom: 20px;
+ }
+
+ .column-33-33 {
+   float: left;
+   width: 33%;
+   padding: 20px;
+   padding-bottom: 20px;
+ }
+
+ .column-80 {
+   float: left;
+   width: 80%;
+   padding: 20px;
+ }
+
+
+ .large-font {
+   font-size: 48px;
+ }
+
+ .xlarge-font {
+   font-size: 64px
+ }
+
+ .button {
+   border: none;
+   color: white;
+   padding: 14px 28px;
+   font-size: 16px;
+   cursor: pointer;
+   background-color: #4CAF50;
+ }
+
+
+ @media screen and (max-width: 1000px) {
+   .column-66,
+   .column-33 {
+     width: 100%;
+     text-align: center;
+   }
+   img {
+     margin: auto;
+   }
+ }
+
+
+
+ .sidepanel  {
+   width: 0;
+   position: fixed;
+   z-index: 2;
+   height: 80%;
+   bottom: 0;
+   right: 0;
+   background-color: gray;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   color: white;
+ }
+
+ .sidepanel a {
+   bottom: 0;
+   right: 0;
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+ }
+
+ .sidepanel a:hover {
+   color: #f1f1f1;
+ }
+
+ .sidepanel .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   color: black;
+ }
+
+ .openbtn {
+   position: fixed;
+   top: 50%;
+   right: 0;
+   font-size: 20px;
+   cursor: pointer;
+   background-color: red;
+   opacity: 0.8;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   transform: rotate(-90deg);
+
+
+ }
+
+
+ .openbtn:hover {
+   background-color:#444;
+ }
+
+ .topbtn {
+   position: fixed;
+   top: 50%;
+   right: 0;
+   font-size: 20px;
+   cursor: pointer;
+   background-color: gray;
+   opacity: 0.8;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   transform: rotate(0deg);
+   opacity: 0.5;
+ }
+ .topbtn:hover {
+   background-color:#444;
+ }
+
+
+ .typebtn {
+   position: fixed;
+   top: 20%;
+   left: 0;
+   right: 92%;
+   font-size: 12px;
+   cursor: pointer;
+   background-color: white;
+   opacity: 0.8;
+   color: white;
+   border: none;
+   transform: rotate(0deg);
+  }
+ .typebtn:hover {
+   background-color:#444;
+ }
+
+ .typebtn1 {
+   position: fixed;
+   top: 40%;
+   left: 0;
+   right: 92%;
+   font-size: 12px;
+   cursor: pointer;
+   background-color: white;
+   opacity: 0.8;
+   color: white;
+   border: none;
+   transform: rotate(0deg);
+  }
+ .typebtn1:hover {
+   background-color:#444;
+ }
+
+ .typebtn2 {
+   position: fixed;
+   top: 60%;
+   left: 0;
+   right: 92%;
+   font-size: 12px;
+   cursor: pointer;
+   background-color: white;
+   opacity: 0.8;
+   color: white;
+   border: none;
+   transform: rotate(0deg);
+  }
+ .typebtn2:hover {
+   background-color:#445;
+   opacity: 0.8;
+ }
+
+ .container1 {
+   position: relative;
+   width: 100%;
+ }
+
+ .image {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ .overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: .3s ease;
+   transition: .3s ease;
+
+ }
+
+ .container1:hover .overlay {
+   -webkit-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+ .text1 {
+   color: white;
+   font-size: 16px;
+   position: absolute;
+   top: 70%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   text-align: center;
+   white-space:  inherit;
+ }
+
+ .text1 a {
+   color: white;
+   text-align: center;
+   text-decoration: none;
+ }
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .column_img {
+   float: left;
+   width: 24%;
+   padding: 5px;
+ }
+
+ /* Clear floats after image containers */
+ .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: 80% 80% 80%;
+   grid-gap: 10px;
+   padding: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+ .termbtn {
+   position: fixed;
+   top: 80%;
+   right: 0;
+   font-size: 16px;
+   cursor: pointer;
+   background-color: red;
+   opacity: 0.8;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   transform: rotate(-90deg);
+
+
+ }
+
+ .termbtn:hover {
+   background-color:#444;
+ }
+
+</style>
+<style>
+      /* Modify the background color */
+
+      .navbar-custom {
+          background-color: white;
+      }
+      /* Modify brand and text color */
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: Black;
+          font: Helvetica;
+      }
+
+  </style><style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <!-- Navbar-->
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="home.html"> <img src="Images/ECO.jpeg"  style="width:auto;height:200%">
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-brand" href="home.html"  style="font-size:18px;">HOME</a></li>
+        <!--<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+
+        <li><a href="#">Page 2</a></li>-->
+
+        <li><a class="navbar-brand" href="Contact.html"  style="font-size:18px;"> CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+</nav>
+<br>
+<br>
+
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<br><br><br>
+<div class="container" id="about" style="background-color:#f1f1f1">
+  <div class="content1"  >
+    <div class="text-center">
+      <h1 class="xlarge-font" style="color:red;"> <b>About</b></h1>
+    </div>
+      <h2 style="font-size:24px" align="justify">Selecting EcoVolks as a partner does not require your project to be bound by a specific geography, size or design aesthetic.
+      </h2>
+  </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+  <div class="content1"  >
+    <div class="text-center">
+      <h1 class="xlarge-font" style="color:red;"> <b>WHO WE ARE?</b></h1>
+    </div>
+      <h2 style="font-size:24px" align="justify">"The highest levels of performance come to people who are centred, intuitive, creative and reflective - people who know to see a problem as an opportunity.."
+      </h2>
+  </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Vision -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+      <h1 class="large-font" style="color:red;"> </b>Our Vision</b></h1>
+
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/1.jpg" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Creative Direction</b></h1>
+              <p align="justify"><span style="font-size:20px">While it might be clear what we do or even how we do it, the reason we have integrated our services is to make projects more manageable and successful for our clients. By incorporating all the design and construction services in-house, we ensure that each aspect of the process works like clockwork. Colleagues from different disciplines within our business collaborate to guarantee the accuracy, and quality of our work. Each taking contractual responsibility for its delivery, leaving our client time to enjoy a seamless process. We call this approach 'from concept to completion', and it remains at the heart of our vision, that ensures we can fulfil our promise that every project will be exceptional without exception.</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Difference -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" style="background-color:#f1f1f1">
+  <div class="text-center">
+    <h1 class="large-font" style="color:red;"><b> Our Difference</b></h1>
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>From Concept To Completion</b></h1>
+        <p align="justify"><span style="font-size:20px">We can manage each and every aspect of a project. From the creation of early concept designs,
+          through the maze of complicated planning and statutory processes, including sensitivities, to construction and final fit-out stages.
+          Some of our clients have likened our approach to that of their own 'personal property development arm', capable of delivering development works from the point of acquisition through to completion of all the building and interior fit out works.</span>
+      <!--<button class="button" style="background-color:red">Read More</button>-->
+    </div>
+    <div class="column-33">
+        <img alt="House 1 3D" width="100%" src="Images/Portfolio/2.jpg" class="imgix cursor-pointer">
+    </div>
+  </div>
+</div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Model -->
+<!-- ####################################################################################################################################################################-->
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+      <h1 class="large-font" style="color:red;"> <b>Our Model</b></h1>
+
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/3.jpg" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Benefiting clients</b></h1>
+              <p align="justify"><span style="font-size:20px">Appointing EcoVolks as your professional team couldn't be easier. We
+                have all the expertise to can decide if you only wish to appoint us as your interior designers, or provide a full turnkey service utilising all of our design and construction capabilities. </p>
+
+                <p align="justify"> <span style="font-size:20px">All our services are provided with complete cost transparency. We will provide a fixed price or agreed percentage for our design and construction management services and procure all the subcontractor works by competitive tender. Our business model is to realise the best design, implemented to the highest quality and delivered at the most competitive price.</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!-- ####################################################################################################################################################################-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+  <div class="content1"  >
+    <div class="text-center">
+      <h1 class="xlarge-font" style="color:red;"> <b>WHAT WE DO?</b></h1>
+    </div>
+      <h2 style="font-size:24px" align="justify">"EcoVolks specialises in 'high-end' residential projects that are centred in authenticity with strong sensitivity to the architecture and surroundings."
+      </h2>
+      <p align="justify"><span style="font-size:20px">The desire to bring all of our disciplines in-house was born out of a vision to help our clients create truly exceptional homes. Not unlike the finest restaurants in the world that control every element of preparation from field to fork. Sourcing the most delectable and rare ingredients and combining this with hugely dedicated and experienced teams, to produce unforgettable gastronomic experiences. These are precisely the service levels that our clients receive and have come to expect whilst working with us.</p>
+  </div>
+</div>
+
+<!-- ####################################################################################################################################################################-->
+<!-- Architecture -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/4.png" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Architecture</b></h1>
+              <p align="justify"><span style="font-size:20px">Adept at working in a range of architectural styles, whether classical, contemporary or an eclectic mix, our architectural department has decades of experience obtaining planning consents, re-modelling,
+                extending and designing the most exceptional private residences in Kerala. Our architects and Engineers briefs are limited only by the imagination, in the past devising successful plans for everything.</p>
+
+                <p align="justify"><span style="font-size:20px">"Our relationship with our clients is so important at EcoVolks. As architects and Engineers we remind ourselves that designing an individual's home is to design their dreams."</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- ####################################################################################################################################################################-->
+<!-- Interior Design -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" style="background-color:#f1f1f1">
+  <div class="text-center">
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Interior Design</b></h1>
+        <p align="justify"><span style="font-size:20px">Witnessing how our designers meticulously turn aspirations into reality is often one of the most enjoyable parts of the design process for our clients. Inspired by the individuals we design for, it follows that EcoVolks has extensive experience across a variety of interior styles. Clients relish receiving early glimpses into their finished home through the illustrations, mood boards, furniture and lighting layouts that are presented with each new phase in the programme.</span>
+          <span style="font-size:20px">"A tailor cuts his cloth, as we design interiors. We don't have a house style, because it's our belief that a luxury interior is only achieved when it's made bespoke to those who have inspired it."
+          </span>
+          </p>
+      <!--<button class="button" style="background-color:red">Read More</button>-->
+    </div>
+    <div class="column-33">
+        <img alt="House 1 3D" width="100%" src="Images/Portfolio/5.jpg" class="imgix cursor-pointer">
+    </div>
+  </div>
+</div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Build and Project Management -->
+<!-- ####################################################################################################################################################################-->
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/6.jpeg" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Build and Project Management</b></h1>
+              <p align="justify"><span style="font-size:20px">Managing all of the building projects we undertake, the construction department at EcoVolks. ensures the highest possible standards are met on all aspects of the project. They undertake exhaustive due diligence prior to appointing sub- contractors, source world class artisans and manage programme schedules and costs. It is their coordinating presence, which uniquely enables EcoVolks's clients to have a single point of contact
+from project concept through to completion.</p>
+
+                <p align="justify"><span style="font-size:20px">"We are often asked, who builds the homes we design. And we usually need to repeat myself when we answer; we do. It's what allows us to be bespoke, it's what makes us different."</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- ####################################################################################################################################################################-->
+<!-- From concept to completion -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" style="background-color:#f1f1f1">
+  <div class="text-center">
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>From concept to completion</b></h1>
+        <p align="justify"><span style="font-size:20px">Our architecture, interior design and construction project management services are all offered as stand-alone services to clients already undertaking works.</span>
+          <span style="font-size:20px">Concept to Completion brings together all of our disciplines under one roof. This is how the most beautifully, bespoke homes are realised and we are able to deliver to the highest levels of client satisfaction.
+          </span>
+          </p>
+      <!--<button class="button" style="background-color:red">Read More</button>-->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ####################################################################################################################################################################-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+  <div class="content1"  >
+    <div class="text-center">
+      <h1 class="xlarge-font" style="color:red;"><b> HOW WE DO IT?</b></h1>
+    </div>
+      <h2 style="font-size:24px" align="justify">"Quality is never an accident; it is always the result of intelligent effort."
+      </h2>
+  </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!--Our Approach -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+      <h1 class="large-font" style="color:red;"> <b>Our Approach</b></h1>
+
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/7.png" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+
+              <p align="justify"><span style="font-size:20px">We create homes that are truly handcrafted, where our clients will live life, love and laugh. It is our privilege and great responsibility to design
+ such intimate and personalised spaces to be enjoyed in the company of friends, family and loved ones. How we achieve such exceptional results is underpinned by our approach to design.</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Difference -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" style="background-color:#f1f1f1">
+  <div class="text-center">
+    <h1 class="large-font" style="color:red;"> <b>Teamwork & Trust</b></h1>
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>A safe pair of hands</b></h1>
+        <p align="justify"><span style="font-size:20px">"He'd fly through the air with the greatest of ease, that daring young man on the flying trapeze." So goes a lyric dedicated to the French acrobat, Jules Leotard.</span>
+          <p align="justify"><span style="font-size:20px">Ambitious acts succeed when teams trust in the hands they are holding. Our clients trust us to deliver their projects, because our open book management allows complete transparency and control over their investment. It is it what enables exceptional quality and value in procurement and assures our clients of an exceptional project outcome, by all definitions.</span>
+        <!--<button class="button" style="background-color:red">Read More</button>-->
+    </div>
+    <div class="column-33">
+        <img alt="House 1 3D" width="100%" src="Images/Portfolio/8.jpeg" class="imgix cursor-pointer">
+    </div>
+  </div>
+</div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Size doesn't matter-->
+<!-- ####################################################################################################################################################################-->
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+      <h1 class="large-font" style="color:red;"> <b>Size doesn't matter</b></h1>
+
+        <div class="row1">
+
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>From la grande maison to a pied à terre</b></h1>
+              <p align="justify"><span style="font-size:20px">In the world of architecture and luxury interiors, projects of different size and scale are equally worthy of inspirational design and meticulous attention to detail. Previous clients have come to us with a range of briefs and requirements, from small apartments and town houses to large residential buildings. The commonality between our projects is never their scale, but the degree of consideration, refinement and luxury that goes into each design. </p>
+
+                <p align="justify"> <span style="font-size:20px">In the same way the bald eagle is one of the largest and most majestic birds to grace the skies, the hummingbird measuring a mere three inches is equally impressive, beating it's wings a remarkable fifty times per second.</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- ####################################################################################################################################################################-->
+<!--Style & Convention -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+    <div class="text-center">
+      <h1 class="large-font" style="color:red;"> <b>Style & Convention</b></h1>
+
+        <div class="row1">
+          <div class="column-33">
+              <img alt="House 1 3D" width="100%" src="Images/Portfolio/9.jpg" class="imgix cursor-pointer">
+          </div>
+          <div class="column-66">
+            <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>A diverse approach to design</b></h1>
+              <p align="justify"><span style="font-size:20px">Our work is a reflection of who our clients are and how they wish to live, a canvas for life's brush strokes, as diverse as each of them. Sometimes bold and dramatic; other times subtle and sensitive.</p>
+              <p align="justify"><span style="font-size:20px">  From classical orders to modern and vernacular styles, our multi- culturally diverse team is adept across them all and experienced, able to challenge convention when there is opportunity to deliver something exceptional without exception.</span>
+              </p>
+            <!--<button class="button" style="background-color:red">Read More</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+<!-- ####################################################################################################################################################################-->
+<!-- Attention To Detail -->
+<!-- ####################################################################################################################################################################-->
+
+<div class="container" style="background-color:#f1f1f1">
+  <div class="text-center">
+    <h1 class="large-font" style="color:red;"> <b>Attention To Detail</b></h1>
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="large-font" style="color:MediumSeaGreen;" align="left"><b>Detail is design</b></h1>
+        <p align="justify"><span style="font-size:20px">Imbued with the seminal ideas, we've learnt to pay particular
+          attention to the detail of our work, because it's what makes the design truly unique - like the intricacies of a snowflake - never to be repeated. Whether we've commissioned a master craftsman to produce bespoke cabinetry for a child's play room or detailed a bathroom skirting in bespoke marble for an absolutely perfect finish. It is always our promise to deliver a truly exceptional design that is bespoke to the requirements and tastes of each of our clients.</span></p>
+
+        <!--<button class="button" style="background-color:red">Read More</button>-->
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ####################################################################################################################################################################-->
+<br><br><br>
+<br><br><br>
+
+<div class="container" id="about" style="background-color:#f1f1f1">
+
+
+
+  <div class="about-section">
+  <br>
+
+  <h2 style="text-align:center">Our Team</h2>
+<!--<p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>-->
+</div>
+
+
+<div class="row">
+
+
+
+  <div class="column">
+    <div class="card" align="center">
+      <img src="Images/Arun.jpeg" alt="Arun" style="width:100%">
+      <div class="container" align="left">
+        <h2>Arun VK</h2>
+        <p class="title">Construction Manager</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card" align="center">
+      <img src="Images/Kiran.jpeg" alt="Kiran" style="width:76%">
+      <div class="container" align="left">
+        <h2>Kiran B</h2>
+        <p class="title">Construction consultant</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+    </div>
+  <div class="column">
+    <div class="card" align="center" >
+      <img src="Images/RJN.jpeg" alt="Renjith" style="width:94%">
+      <div class="container" align="left">
+        <h2>Renjith J Nair</h2>
+        <p class="title">Sustainability and Energy Consultant</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="Nisthul" style="width:100%">
+      <div class="container">
+        <h2>Nisthul Nirmal</h2>
+        <p class="title">Water Engineering Consultant</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="Laiju" style="width:100%">
+      <div class="container">
+        <h2>Laiju</h2>
+        <p class="title">Environmental Engineer Consultant</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Tijo" style="width:100%">
+      <div class="container">
+        <h2>Tijo</h2>
+        <p class="title">Structural Consultant</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+</div>-->
+
+<div class="row">
+
+  </div>
+  <div class="column">
+    <div class="card" align="center" >
+      <img src="Images/Tijo.jpeg" alt="Tijo" style="width:76%">
+      <div class="container" align="left">
+        <h2>Tijo K Robinson</h2>
+        <p class="title">Structural consultant</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="Images/Jose.jpeg" alt="Jose" style="width:100%">
+      <div class="container">
+        <h2>Jose Tom</h2>
+        <p class="title">Structural consultant</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="Images/Rosin.jpeg" alt="Merin" style="width:100%">
+      <div class="container">
+        <h2>Rosin Jose</h2>
+        <p class="title">Architecture Consultant</p>
+        <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>-->
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> &copy; Copyright 2021, EcoVolks</div>
+
+</body>
+</html>
